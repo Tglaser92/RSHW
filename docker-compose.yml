@@ -16,7 +16,6 @@ services:
 #      INFLUXDB_ADMIN_ENABLED: "true"
 #      INFLUXDB_ADMIN_USER = root
 #      INFLUXDB_ADMIN_PASSWORD=root
-#      LOAD IN DATA FROM CSV FILE HERE
   grafana:
     image: grafana/grafana:3.1.1
     ports:
@@ -25,3 +24,5 @@ services:
       - /var/lib/grafana
  #  extra service goes here
  #      image: Twain's image to load data into a CSV file from a publically available CSV
+ #      LOAD IN DATA FROM CSV FILE to our influxdb 'Relativity Space' HERE
+
