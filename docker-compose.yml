@@ -1,8 +1,8 @@
-version: "3"
+version: '2'
 
 services:
   influxdb:
-    image: influxdb:1.0
+    image: influxdb:1.5
     ports:
       - "8083:8083"
       - "8086:8086"
@@ -10,9 +10,18 @@ services:
     volumes:
       - /var/lib/influxdb
       - ./influxdb.conf:/etc/influxdb/influxdb.conf
+      #For some reasone enviroment variables are not working as intended..
+#    environment:
+#      PRE_CREATE_DB: "Relativity Space"
+#      INFLUXDB_ADMIN_ENABLED: "true"
+#      INFLUXDB_ADMIN_USER = root
+#      INFLUXDB_ADMIN_PASSWORD=root
+#      LOAD IN DATA FROM CSV FILE HERE
   grafana:
     image: grafana/grafana:3.1.1
     ports:
       - "3000:3000"
     volumes:
       - /var/lib/grafana
+ #  extra service goes here
+ #      image: Twain's image to load data into a CSV file from a publically available CSV
