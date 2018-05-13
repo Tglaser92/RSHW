@@ -1,6 +1,15 @@
 # RSHomework
 Set up a TSDB with Influxdb and graph it with Grafana using Docker
 
+BEFORE WE START. Install docker on your machine. 
+            
+            sudo apt-get install docker-engine -y
+            
+ Start docker and run "hello world" to test if it's set up properly.
+ 
+            sudo service docker start
+            sudo docker run hello-world
+
 
 ## To Run this file 
 1. Clone this repository to your local machine. 
@@ -36,7 +45,7 @@ Set up a TSDB with Influxdb and graph it with Grafana using Docker
       type: influxDB
       URL: http://influxdb:8086
       Access: proxy
-      Database: collectd
+      Database: xxx
     
   Save and test if source is working
    
@@ -46,7 +55,7 @@ Set up a TSDB with Influxdb and graph it with Grafana using Docker
   ### c. Name the panel as you like, and navigate to the "Metrics" tab.
      For Metric "A"
      
-        From: default memory_value
+        From: default XXX
         Where: type_instance = used
         Select: field(value) mean()
         Group By: time($interval) fill(null(
@@ -55,7 +64,7 @@ Set up a TSDB with Influxdb and graph it with Grafana using Docker
         
         Panel data sourecd: influxdb
    
-   ### d. Navigate to the Axes tab and change the unit to bytes.
+   ### d. Navigate to the Axes tab and change the unit to XXX.
    
    ### e. select "Back to dashboard" and analyze away!
    
