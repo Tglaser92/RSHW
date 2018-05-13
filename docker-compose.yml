@@ -1,13 +1,6 @@
 version: "3"
 
 services:
-  collectd:
-    image: fr3nd/collectd
-    privileged: true
-    network_mode: host
-    volumes:
-      - /proc:/mnt/proc:ro
-      - ./collectd.conf:/etc/collectd/collectd.conf
   influxdb:
     image: influxdb:1.0
     ports:
