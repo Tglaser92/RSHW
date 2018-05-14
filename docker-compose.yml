@@ -22,6 +22,14 @@ services:
       - "3000:3000"
     volumes:
       - /var/lib/grafana
+  collectd:
+    image: fr3nd/collectd
+    privileged: true
+    network_mode: host
+    volumes:
+      - /proc:/mnt/proc:ro
+      - ./collectd.conf:/etc/collectd/collectd.conf      
+      
  #  extra service goes here
  #      image: Twain's image to load data into a CSV file from a publically available CSV
  #      LOAD IN DATA FROM CSV FILE to our influxdb 'Relativity Space' HERE
