@@ -26,6 +26,8 @@ BEFORE WE START. Install docker on your machine.
     passwd: root
     host: localhost
     port: 8086
+    
+    Database: Collectd
   
   Use Query Templates to navigate data
 
@@ -45,7 +47,7 @@ BEFORE WE START. Install docker on your machine.
       type: influxDB
       URL: http://influxdb:8086
       Access: proxy
-      Database: xxx
+      Database: collectd
     
   Save and test if source is working
    
