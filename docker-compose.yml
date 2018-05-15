@@ -12,7 +12,7 @@ services:
       - ./influxdb.conf:/etc/influxdb/influxdb.conf
       #For some reasone enviroment variables are not working as intended..
 #    environment:
-#      PRE_CREATE_DB: "Relativity Space"
+#      PRE_CREATE_DB: "Relativity Space" --  Already made... named collectd
 #      INFLUXDB_ADMIN_ENABLED: "true"
 #      INFLUXDB_ADMIN_USER = root
 #      INFLUXDB_ADMIN_PASSWORD=root
